@@ -35,6 +35,7 @@ The original data contains each headline posted on Reuters between March 20, 201
 In order to effectively use TfidfVectorizer, the headlines need to be put into a string containing each headline for the respective date. This was accomplished by grouping by day, then transforming the headlines to a list of each headline.
 
 ***Example of headlines from March 3, 2020:***
+
 ![Capture](https://user-images.githubusercontent.com/70597605/104619670-26087300-565c-11eb-85dc-f31892c46896.PNG)
 
 Next, data of the S&P 500 is retrieved using Python's yfinance library:
@@ -42,6 +43,7 @@ Next, data of the S&P 500 is retrieved using Python's yfinance library:
 ![Capture](https://user-images.githubusercontent.com/70597605/104620002-7d0e4800-565c-11eb-8587-feb68afc21e2.PNG)
 
 Finally, the data is labeled and merged together.
+
 ![Capture](https://user-images.githubusercontent.com/70597605/104620186-b5ae2180-565c-11eb-8777-f395a870eba6.PNG)
 
 ***Count of Labels***
