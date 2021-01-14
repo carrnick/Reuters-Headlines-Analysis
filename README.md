@@ -1,6 +1,7 @@
 # Reuters-Headlines-Analysis
 Sentiment analysis of Reuters news headlines using Sklearn's [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) to determine if headlines can predict if the S&P500 closed higher than the previous day.
 
+![stock-market-thumb](https://user-images.githubusercontent.com/70597605/104617738-cb6e1780-5659-11eb-85c0-09341e743af9.jpg)
 
 # Methodology
 1) Get data of each Reuters headline and the date posted.
