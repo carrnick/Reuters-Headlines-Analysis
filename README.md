@@ -30,14 +30,11 @@ Sentiment analysis of Reuters news headlines using Sklearn's [TfidfVectorizer](h
 # Examples of Data
 
 The original data contains each headline posted on Reuters between March 20, 2018 and June 18, 2020.
-
 ![Capture](https://user-images.githubusercontent.com/70597605/104619492-ec376c80-565b-11eb-8975-75c269b99d90.PNG)
 
 In order to effectively use TfidfVectorizer, the headlines need to be put into a string containing each headline for the respective date. This was accomplished by grouping by day, then transforming the headlines to a list of each headline.
 
-
 ***Example of headlines from March 3, 2020:***
-
 ![Capture](https://user-images.githubusercontent.com/70597605/104619670-26087300-565c-11eb-85dc-f31892c46896.PNG)
 
 Next, data of the S&P 500 is retrieved using Python's yfinance library:
@@ -45,9 +42,11 @@ Next, data of the S&P 500 is retrieved using Python's yfinance library:
 ![Capture](https://user-images.githubusercontent.com/70597605/104620002-7d0e4800-565c-11eb-8587-feb68afc21e2.PNG)
 
 Finally, the data is labeled and merged together.
-
 ![Capture](https://user-images.githubusercontent.com/70597605/104620186-b5ae2180-565c-11eb-8777-f395a870eba6.PNG)
 
+***Count of Labels***
+
+![fig](https://user-images.githubusercontent.com/70597605/104623219-273b9f00-5660-11eb-9b4c-479b9beb890d.png)
 
 # TfidfVectorizer
 Sklearn's [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) converts a collection of raw documents (strings in this case) to a matrix of TF-IDF features.   
@@ -58,11 +57,9 @@ Esentially, the goal is to use TfidfVectorizer to find common words that appear 
 
 
 ***Sample of most common groups of two words:***
-
 ![freq](https://user-images.githubusercontent.com/70597605/104620825-69afac80-565d-11eb-9444-11315b314bfa.png)
 
 ***Most common singular words:***
-
 ![freq](https://user-images.githubusercontent.com/70597605/104620990-9cf23b80-565d-11eb-8e93-ed3911878bc3.png)
 # Machine Learning Models and Results
 
@@ -94,8 +91,7 @@ Esentially, the goal is to use TfidfVectorizer to find common words that appear 
 ## XGBoost
 > - Worst overall performer out of the three models, however it was surprisingly effective at predicting "Up" labels, and had the highest TNR
 >  - 59% TPR,  78% TNR
-
-
+>  
 *Confusion Matrix*
 
 ![confmatxg](https://user-images.githubusercontent.com/70597605/104616797-bc3a9a00-5658-11eb-83c1-07d4298462b3.png)
@@ -115,8 +111,7 @@ Esentially, the goal is to use TfidfVectorizer to find common words that appear 
 ## Linear Support Vector Machine
 > - Extremely effective TPR, but below average TNR
 > - 78.2% TPR, 63.1% TNR
-
-
+> 
 *Confusion Matrix*
 
 ![Capture](https://user-images.githubusercontent.com/70597605/104622662-8baa2e80-565f-11eb-9614-f550242ad7a8.PNG)
